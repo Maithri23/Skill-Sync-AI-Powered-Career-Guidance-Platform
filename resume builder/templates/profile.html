@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="page-title">Edit Profile</h1>
+<form method="post" class="grid-2">
+  <div class="card">
+    <h2>Personal</h2>
+    <label>Full Name <input name="full_name" value="{{ profile.personal.full_name }}"></label>
+    <label>Email <input name="p_email" value="{{ profile.personal.email }}"></label>
+    <label>Phone <input name="phone" value="{{ profile.personal.phone }}"></label>
+    <label>Location <input name="location" value="{{ profile.personal.location }}"></label>
+    <label>Website <input name="website" value="{{ profile.personal.website }}"></label>
+    <label>LinkedIn <input name="linkedin" value="{{ profile.personal.linkedin }}"></label>
+    <label>GitHub <input name="github" value="{{ profile.personal.github }}"></label>
+  </div>
+  <div class="card">
+    <h2>Summary</h2>
+    <textarea name="summary" rows="6">{{ profile.summary }}</textarea>
+    <h2>Skills (comma separated)</h2>
+    <input name="skills" value="{{ profile.skills | join(', ') }}">
+    <h2>Languages (comma separated)</h2>
+    <input name="languages" value="{{ profile.languages | join(', ') }}">
+    <div class="mt">
+      <button class="btn" type="submit">Save Profile</button>
+    </div>
+  </div>
+</form>
+{% endblock %}

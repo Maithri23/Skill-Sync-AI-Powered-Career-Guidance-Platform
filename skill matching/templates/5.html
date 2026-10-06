@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Skills for Civil Engineering</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative; /* Ensures positioning works for the home button */
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            justify-items: center;
+            width: 80%;
+        }
+        .skill-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 90%;
+        }
+        .skill-button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        .home-button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s, transform 0.2s;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .home-button:hover {
+            background-color: #ff4500;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Home Button positioned in top right corner -->
+    <a href="{{ url_for('home') }}">
+        <button class="home-button">Home</button>
+    </a>
+
+    <h1>Basic Skills for Civil Engineering</h1>
+    
+    <div class="container">
+        <button class="skill-button">Structural Analysis</button>
+        <button class="skill-button">Construction Materials</button>
+        <button class="skill-button">Fluid Mechanics</button>
+        <button class="skill-button">Soil Mechanics</button>
+        <button class="skill-button">Geotechnical Engineering</button>
+        <button class="skill-button">Environmental Engineering</button>
+        <button class="skill-button">Transportation Engineering</button>
+        <button class="skill-button">Surveying</button>
+        <button class="skill-button">Hydraulics</button>
+        <button class="skill-button">Concrete Design</button>
+        <button class="skill-button">Steel Design</button>
+        <button class="skill-button">Reinforced Concrete</button>
+        <button class="skill-button">Construction Management</button>
+        <button class="skill-button">Building Information Modeling (BIM)</button>
+        <button class="skill-button">AutoCAD</button>
+        <button class="skill-button">Structural Design Software</button>
+        <button class="skill-button">Sustainability in Construction</button>
+        <button class="skill-button">Project Management</button>
+        <button class="skill-button">Cost Estimation</button>
+        <button class="skill-button">Earthquake Engineering</button>
+        <button class="skill-button">Concrete Technology</button>
+        <button class="skill-button">Geotechnical Site Investigation</button>
+        <button class="skill-button">Highway Engineering</button>
+        <button class="skill-button">Water Resources Engineering</button>
+        <button class="skill-button">Building Codes</button>
+        <button class="skill-button">Structural Stability</button>
+        <button class="skill-button">Material Testing</button>
+        <button class="skill-button">Environmental Impact Assessment</button>
+        <button class="skill-button">Road Design</button>
+        <button class="skill-button">Bridge Design</button>
+        <button class="skill-button">Urban Planning</button>
+        <button class="skill-button">Environmental Protection</button>
+        <button class="skill-button">Construction Safety</button>
+        <button class="skill-button">Water Treatment</button>
+        <button class="skill-button">Stormwater Management</button>
+        <button class="skill-button">Pavement Design</button>
+        <button class="skill-button">Foundation Engineering</button>
+        <button class="skill-button">Tunneling</button>
+        <button class="skill-button">Coastal Engineering</button>
+        <button class="skill-button">Retaining Walls</button>
+        <button class="skill-button">Construction Scheduling</button>
+        <button class="skill-button">Contract Administration</button>
+        <button class="skill-button">Municipal Engineering</button>
+        <button class="skill-button">Safety Management</button>
+        <button class="skill-button">CADD Software</button>
+        <button class="skill-button">Masonry Design</button>
+        <button class="skill-button">Wind Engineering</button>
+        <button class="skill-button">Environmental Monitoring</button>
+        <button class="skill-button">Noise Control</button>
+        <button class="skill-button">Dams and Reservoirs</button>
+
+    </div>
+
+</body>
+</html>

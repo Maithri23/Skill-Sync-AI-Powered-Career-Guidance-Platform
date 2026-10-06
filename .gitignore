@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Environment variables and credentials
+.env
+.env.*
+!.env.example
+
+# Application data and generated files
+instance/
+uploads/
+*.db
+*.sqlite3
+*.pkl
+*.webm
+user_audio.wav
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

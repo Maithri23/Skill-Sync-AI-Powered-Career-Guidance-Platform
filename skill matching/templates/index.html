@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kala-Chakra | Skill-Sync</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Baloo 2', cursive;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #56d8ff, #457b9d, #a8dadc, #e63946);
+            background-size: 300% 300%;
+            animation: gradientCycle 15s infinite ease-in-out;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientCycle {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .shape {
+            position: absolute;
+            top: -10%;
+            width: 30px;
+            height: 30px;
+            opacity: 0.6;
+            animation: fall 10s linear infinite, sway 4s ease-in-out infinite;
+        }
+
+        .circle { border-radius: 50%; background: #f39c12; }
+        .square { background: #1d3557; }
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 30px solid #a8dadc;
+        }
+
+        @keyframes fall {
+            0% { top: -10%; transform: translateX(0); }
+            100% { top: 110%; transform: translateX(60px); }
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: translateX(-20px); }
+            50% { transform: translateX(20px); }
+        }
+
+        .shape:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .shape:nth-child(2) { left: 30%; animation-delay: 1.5s; }
+        .shape:nth-child(3) { left: 50%; animation-delay: 3s; }
+        .shape:nth-child(4) { left: 70%; animation-delay: 4.5s; }
+        .shape:nth-child(5) { left: 90%; animation-delay: 6s; }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background: rgba(0, 0, 0, 0.75);
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1.5s ease-out;
+            border: 3px solid #f39c12;
+            animation: blinkBorder 2.5s infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes blinkBorder {
+            0%, 100% { border-color: #f39c12; }
+            50% { border-color: transparent; }
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #ffd166;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            margin: 10px 0 20px;
+            color: #fcbf49;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .marquee {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        marquee {
+            font-size: 1.1em;
+            color: #fce38a;
+            font-weight: bold;
+        }
+
+        form {
+            margin-top: 10px;
+        }
+
+        label {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            display: block;
+            color: #fff;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            margin-bottom: 20px;
+            font-size: 1em;
+            background: #f4f4f4;
+            color: #333;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            box-shadow: 0 4px 12px rgba(218, 67, 67, 0.4);
+        }
+
+        button {
+            background: linear-gradient(45deg, #e63946, #f39c12);
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #d62828, #ff9f1c);
+            transform: scale(1.05);
+        }
+
+        footer {
+            font-size: 0.9em;
+            margin-top: 20px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Shapes -->
+    <div class="shape circle"></div>
+    <div class="shape square"></div>
+    <div class="shape triangle"></div>
+    <div class="shape circle"></div>
+    <div class="shape triangle"></div>
+
+    <div class="container">
+        <div class="marquee">
+            <marquee>🚀 "The future belongs to those who learn more skills and combine them in creative ways." 💡</marquee>
+        </div>
+
+        <h1>SKILL-SYNC</h1>
+        <h2>Find Your Perfect Job Title</h2>
+        <h3>Selected Domain: {{ selected_domain }}</h3>
+
+        <form method="POST" action="/skills/index">
+            <label for="skills">Enter Your Skills</label>
+            <input type="text" id="skills" name="skills" placeholder="E.g., Python, AI, CAD" required>
+            <button type="submit">Get Recommendations</button>
+        </form>
+
+        <footer>
+            Powered by <strong>SKILL_SYNC</strong> ⚙️ | <a href="/skills/">Back to Home</a>
+        </footer>
+    </div>
+
+</body>
+</html>

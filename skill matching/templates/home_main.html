@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSync - AI-Powered Career Guidance Platform</title>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            padding-top: 70px;
+        }
+
+        /* HEADER */
+        .header {
+            background-color: #1E3A5F;
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #F8B400;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1em;
+            transition: color 0.3s ease;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .nav-menu a:hover {
+            color: #F8B400;
+        }
+
+        /* Special Styling for Login Button */
+        .nav-menu .login-btn {
+            background: #F77F00;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-menu .login-btn:hover {
+            background: #e66a00;
+        }
+
+        /* Main Section */
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 50px auto 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.4em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        /* Buttons */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .feature-button {
+            width: 350px;
+            padding: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .feature-button i {
+            font-size: 1.5em;
+        }
+
+        .feature-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Unique Button Colors */
+        .job-recommendations { background-color: #3498db; }
+        .skill-development { background-color: #2ecc71; }
+        .virtual-interview { background-color: #f39c12; }
+        .industry-experts { background-color: #8e44ad; }
+        .resume-builder { background-color: #e74c3c; }
+
+        /* Marquee */
+        .marquee {
+            color: #ff7f50;
+            font-size: 24px;
+            font-weight: bold;
+            background: transparent;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: transparent;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        .footer h2 {
+            margin: 0;
+            color: #F8B400;
+            font-size: 1.5em;
+        }
+
+        .footer p {
+            margin: 8px 0;
+            font-size: 1em;
+            color: #020202;
+        }
+
+        .copyright {
+            font-size: 0.8em;
+            color: #aaa;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 100px;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                text-align: center;
+                gap: 8px;
+            }
+
+            .feature-button {
+                width: 90%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="index.html" class="logo">SkillSync</a>
+        <ul class="nav-menu">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="job-recommendations.html"><i class="fas fa-briefcase"></i> Jobs</a></li>
+            <li><a href="skill-development.html"><i class="fas fa-brain"></i> Skills</a></li>
+            <li><a href="virtual-interview.html"><i class="fas fa-video"></i> Interview</a></li>
+            <li><a href="industry-experts.html"><i class="fas fa-user-tie"></i> Experts</a></li>
+            <li><a href="resume-builder.html"><i class="fas fa-file-alt"></i> Resume</a></li>
+            <li><a href="login.html" class="login-btn">Login</a></li>
+        </ul>
+    </header>
+
+    <!-- Main Section -->
+    <div class="container">
+        <h1>Welcome to SkillSync</h1>
+        <p>Your AI-powered career navigator. Choose a feature to get started.</p>
+
+        <div class="button-container">
+            <a href="home.html" class="feature-button job-recommendations">
+                <i class="fas fa-briefcase"></i> Job Recommendations
+            </a>
+            <a href="skill-development.html" class="feature-button skill-development">
+                <i class="fas fa-brain"></i> Skill Development
+            </a>
+            <a href="virtual-interview.html" class="feature-button virtual-interview">
+                <i class="fas fa-video"></i> Virtual Interview
+            </a>
+            <a href="samvad.html" class="feature-button industry-experts">
+                <i class="fas fa-user-tie"></i> Industry Experts
+            </a>
+            <a href="resume-builder.html" class="feature-button resume-builder">
+                <i class="fas fa-file-alt"></i> Resume Builder
+            </a>
+        </div>
+    </div>
+
+    <marquee class="marquee">Craft Your Tomorrow, Today.</marquee>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <h2>About SkillSync</h2>
+        <p>Your AI-powered career navigator.</p>
+        <div class="copyright">© 2025 SkillSync. All Rights Reserved.</div>
+    </footer>
+
+</body>
+</html>

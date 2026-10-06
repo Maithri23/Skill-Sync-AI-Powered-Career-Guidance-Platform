@@ -1,0 +1,11 @@
+JobTitle,TechnicalSkills,Frameworks,VersionControl,SoftSkills,Tools
+Embedded Systems Engineer,"C, C++, Embedded C, Verilog","Keil, MATLAB, Simulink",Git,"Problem-solving, Communication","Oscilloscope, Multimeter"
+VLSI Design Engineer,"VHDL, Verilog, SystemVerilog","Xilinx Vivado, Cadence, Synopsys",Mercurial,"Analytical thinking, Teamwork","Logic Analyzer, FPGA"
+RF Engineer,"Antenna Design, RF Circuit Design","HFSS, CST Studio",Perforce,"Critical Thinking, Attention to Detail","Spectrum Analyzer, Network Analyzer"
+IoT Engineer,"Python, MQTT, Embedded C","Node-RED, ThingSpeak",Perforce,"Creativity, Adaptability","Raspberry Pi, Arduino"
+Telecom Engineer,"Network Protocols, RF Optimization","5G, LTE, 4G",SVN,"Teamwork, Troubleshooting","Base Station Analyzer, BTS"
+PCB Design Engineer,"Altium Designer, Eagle","OrCAD, KiCad",SVN,"Detail-oriented, Time Management","Soldering Station, Multimeter"
+Signal Processing Engineer,"MATLAB, Python, DSP","Simulink, LabVIEW",Mercurial,"Logical Thinking, Data Analysis","DSP Boards, Spectrum Analyzer"
+Network Engineer,"Networking, Protocols, Firewalls","Cisco Packet Tracer, GNS3",SVN,"Communication, Multi-tasking","Routers, Switches"
+Control Systems Engineer,"PID Controllers, PLC Programming","SCADA, MATLAB",Git,"Problem-Solving, Adaptability","HMI, PLC"
+Automation Engineer,"PLC, SCADA, Robotics","Siemens TIA Portal, Factory I/O",SVN,"Critical Thinking, Creativity","Actuators, Sensors"

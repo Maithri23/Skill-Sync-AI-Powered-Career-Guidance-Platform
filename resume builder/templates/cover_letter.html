@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="page-title">Cover Letter</h1>
+<form method="post" class="grid-2">
+  <div class="card">
+    <label>Title <input name="title" value="{{ cl.title }}"></label>
+    <label>Theme Color <input name="theme_color" value="{{ cl.theme_color }}"></label>
+    <label>Font Family <input name="font_family" value="{{ cl.font_family }}"></label>
+    <button class="btn mt" type="submit">Save</button>
+    <div class="mt">
+      <a class="btn" href="{{ url_for('cover.export', cl_id=cl.id, fmt='pdf') }}">Export PDF</a>
+      <a class="btn" href="{{ url_for('cover.export', cl_id=cl.id, fmt='docx') }}">Export DOCX</a>
+      <a class="btn" href="{{ url_for('cover.export', cl_id=cl.id, fmt='txt') }}">Export TXT</a>
+    </div>
+  </div>
+  <div class="card">
+    <label>Body</label>
+    <textarea name="body" rows="20">{{ cl.body }}</textarea>
+  </div>
+</form>
+{% endblock %}

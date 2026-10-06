@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Skills for Computer Science</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative; /* Ensures positioning works for the home button */
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            justify-items: center;
+            width: 80%;
+        }
+        .skill-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 90%;
+        }
+        .skill-button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        .home-button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s, transform 0.2s;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .home-button:hover {
+            background-color: #ff4500;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Home Button positioned in top right corner -->
+    <a href="{{ url_for('home') }}">
+        <button class="home-button">Home</button>
+    </a>
+    
+    <h1>Basic Skills for Computer Science</h1>
+    
+    <div class="container">
+        <button class="skill-button">Programming Languages</button>
+        <button class="skill-button">Data Structures</button>
+        <button class="skill-button">Algorithms</button>
+        <button class="skill-button">Object-Oriented Programming</button>
+        <button class="skill-button">Problem Solving</button>
+        <button class="skill-button">Database Management Systems</button>
+        <button class="skill-button">Web Development</button>
+        <button class="skill-button">Frontend Frameworks</button>
+        <button class="skill-button">Backend Development</button>
+        <button class="skill-button">API Development</button>
+        <button class="skill-button">Version Control</button>
+        <button class="skill-button">Operating Systems</button>
+        <button class="skill-button">Software Development Lifecycle</button>
+        <button class="skill-button">Agile Methodology</button>
+        <button class="skill-button">Data Analysis</button>
+        <button class="skill-button">Data Visualization</button>
+        <button class="skill-button">Cloud Computing</button>
+        <button class="skill-button">Networking Basics</button>
+        <button class="skill-button">Cybersecurity Fundamentals</button>
+        <button class="skill-button">Encryption and Cryptography</button>
+        <button class="skill-button">Machine Learning</button>
+        <button class="skill-button">Deep Learning</button>
+        <button class="skill-button">Natural Language Processing</button>
+        <button class="skill-button">Data Mining</button>
+        <button class="skill-button">Big Data Technologies</button>
+        <button class="skill-button">Mobile App Development</button>
+        <button class="skill-button">Software Testing</button>
+        <button class="skill-button">Continuous Integration/Continuous Deployment</button>
+        <button class="skill-button">DevOps Practices</button>
+        <button class="skill-button">Containerization</button>
+        <button class="skill-button">Web Scraping</button>
+        <button class="skill-button">RESTful Web Services</button>
+        <button class="skill-button">HTML5 and CSS3</button>
+        <button class="skill-button">JavaScript Frameworks</button>
+        <button class="skill-button">TypeScript</button>
+        <button class="skill-button">Linux Command Line</button>
+        <button class="skill-button">Data Modeling</button>
+        <button class="skill-button">System Design</button>
+        <button class="skill-button">Multi-threading and Concurrency</button>
+        <button class="skill-button">Cloud Storage Solutions</button>
+        <button class="skill-button">Version Control Systems</button>
+        <button class="skill-button">User Interface Design</button>
+        <button class="skill-button">User Experience Design</button>
+        <button class="skill-button">Microservices Architecture</button>
+        <button class="skill-button">Software Architecture</button>
+        <button class="skill-button">Parallel Computing</button>
+        <button class="skill-button">Testing Frameworks</button>
+        <button class="skill-button">Performance Optimization</button>
+        <button class="skill-button">Ethical Hacking</button>
+        <button class="skill-button">Internet of Things</button>
+    </div>
+
+</body>
+</html>

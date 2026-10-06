@@ -1,0 +1,101 @@
+JobTitle,TechnicalSkills,Frameworks,VersionControl,SoftSkills,Tools
+Machine Learning Engineer,"Python, R, SQL, Data Preprocessing","TensorFlow, PyTorch","Git, GitHub","Problem-Solving, Communication","Jupyter Notebook, Apache Spark"
+Data Scientist,"Statistics, Data Wrangling, Machine Learning Algorithms","Pandas, NumPy","Git, GitHub","Critical Thinking, Storytelling","Tableau, Power BI"
+AI Research Scientist,"Research Methodologies, Algorithm Development","TensorFlow, Keras","Git, GitLab","Analytical Thinking, Collaboration","MATLAB, Jupyter Notebook"
+Computer Vision Engineer,"Image Processing, Object Detection","OpenCV, TensorFlow",Git,"Attention to Detail, Problem-Solving","Jupyter Notebook, MATLAB"
+Natural Language Processing Engineer,"Text Processing, Sentiment Analysis","NLTK, SpaCy",Git,"Communication, Analytical Skills","Jupyter Notebook, Google Colab"
+AI Product Manager,"Understanding AI Technologies, Market Research","Agile, Scrum",Git (for documentation),"Leadership, Communication","Trello, JIRA"
+ML Ops Engineer,"CI/CD, Monitoring, Data Pipeline Management","Docker, Kubernetes",Git,"Problem-Solving, Communication","Jenkins, Apache Airflow"
+Data Analyst,"Data Cleaning, Exploratory Data Analysis","Excel, SQL, R",Git,"Attention to Detail, Critical Thinking","Tableau, Power BI"
+Algorithm Engineer,"Algorithm Design, Performance Tuning","TensorFlow, PyTorch",Git,"Analytical Thinking, Problem-Solving",Jupyter Notebook
+Statistical Analyst,"Statistical Modeling, Hypothesis Testing","R, Python",Git,"Critical Thinking, Communication","SAS, SPSS"
+Predictive Modeler,"Predictive Modeling, Time Series Analysis","R, Python",Git,"Analytical Skills, Communication","Tableau, Excel"
+AI Consultant,"AI Strategy Development, Client Engagement",Various,Git,"Communication, Problem-Solving","MS Office, JIRA"
+Big Data Engineer,"Big Data Technologies, Data Warehousing","Hadoop, Spark",Git,"Problem-Solving, Team Collaboration","Apache Kafka, Hive"
+Machine Learning Researcher,"Research Design, Literature Review","TensorFlow, PyTorch",Git,"Critical Thinking, Collaboration","MATLAB, Jupyter Notebook"
+AI Solutions Architect,"Solution Design, Technical Feasibility",Various,Git,"Strategic Thinking, Communication","Visio, Confluence"
+Data Mining Specialist,"Data Mining Techniques, Pattern Recognition","R, Python",Git,"Analytical Skills, Attention to Detail","Weka, RapidMiner"
+Cognitive Computing Engineer,"Cognitive Models, Human-Computer Interaction","TensorFlow, IBM Watson",Git,"Problem-Solving, Communication","Jupyter Notebook, IBM Cloud"
+Speech Recognition Engineer,"Speech Processing, Audio Analysis","Kaldi, TensorFlow",Git,"Attention to Detail, Analytical Skills","Python, MATLAB"
+Human-Computer Interaction Specialist,"User Experience Design, Usability Testing",Various,Git,"Communication, Empathy","Sketch, Figma"
+AI Operations Manager,"AI Strategy Implementation, Operational Efficiency",Various,Git,"Leadership, Problem-Solving","JIRA, Trello"
+Neural Network Engineer,"Neural Network Design, Optimization","TensorFlow, Keras",Git,"Analytical Thinking, Team Collaboration",Jupyter Notebook
+Text Mining Analyst,"Text Analysis, Information Retrieval","NLTK, TextRazor",Git,"Attention to Detail, Communication","Python, R"
+Image Processing Engineer,"Image Analysis, Feature Extraction","OpenCV, PIL",Git,"Problem-Solving, Creativity","MATLAB, Jupyter Notebook"
+AI Quality Assurance Engineer,"Testing AI Models, Quality Assurance",Various,Git,"Attention to Detail, Communication","Selenium, JIRA"
+Data Visualization Specialist,"Data Presentation, Storytelling with Data","Tableau, Power BI",Git,"Communication, Creativity","D3.js, Google Data Studio"
+Technical Program Manager (AI),"Project Management, Resource Allocation","Agile, Scrum",Git,"Leadership, Communication","MS Project, JIRA"
+Machine Learning Analyst,"Model Evaluation, Data Analysis","R, Python",Git,"Critical Thinking, Problem-Solving","Excel, Tableau"
+AI Training Specialist,"Training AI Models, Data Labeling",Various,Git,"Communication, Attention to Detail","Jupyter Notebook, Labelbox"
+Cloud AI Engineer,"Cloud Computing, AI Deployment","AWS, Azure, Google Cloud",Git,"Problem-Solving, Communication","Terraform, Docker"
+AI Sales Engineer,"Technical Sales, Client Relationship Management",Various,Git,"Communication, Negotiation",CRM Software
+Digital Marketing Analyst (AI),"Marketing Analytics, Campaign Optimization","Google Analytics, SEMrush",Git,"Analytical Skills, Creativity","Excel, Tableau"
+Reinforcement Learning Researcher,"Reinforcement Learning Algorithms, Game Theory","TensorFlow, PyTorch",Git,"Critical Thinking, Collaboration",Jupyter Notebook
+AI Platform Engineer,"Platform Development, API Integration","Docker, Kubernetes",Git,"Problem-Solving, Communication","Jupyter Notebook, Postman"
+Data Governance Specialist,"Data Management, Compliance",Various,Git,"Attention to Detail, Analytical Skills","Collibra, Alation"
+Statistical Programmer,"Statistical Analysis, Data Manipulation","R, SAS, Python",Git,"Problem-Solving, Communication","SAS, SPSS"
+AI Infrastructure Engineer,"Infrastructure Design, Cloud Management","AWS, Azure, Google Cloud",Git,"Communication, Team Collaboration","Terraform, Ansible"
+Fraud Detection Analyst (AI),"Fraud Detection Techniques, Risk Assessment","Python, R",Git,"Analytical Thinking, Attention to Detail","SAS, Excel"
+Behavioral Data Scientist,"Behavioral Analysis, User Research","R, Python",Git,"Communication, Critical Thinking","Tableau, Power BI"
+AI Innovation Manager,"Innovation Strategies, Research Development",Various,Git,"Leadership, Creativity","Trello, JIRA"
+Smart Automation Engineer,"Automation Techniques, Workflow Optimization","UiPath, Automation Anywhere",Git,"Problem-Solving, Communication","Jenkins, Ansible"
+Machine Learning Consultant,"Client Consultation, Model Development",Various,Git,"Communication, Problem-Solving","MS Office, JIRA"
+Bioinformatics Data Scientist,"Genomic Data Analysis, Bioinformatics Tools","Bioconductor, R",Git,"Analytical Skills, Communication","Galaxy, Bioconductor"
+AI Compliance Officer,"Compliance Management, Risk Analysis",Various,Git,"Attention to Detail, Communication",Compliance Software
+Data Strategy Manager,"Data Strategy Development, Stakeholder Engagement",Various,Git,"Leadership, Strategic Thinking","JIRA, Confluence"
+AI Customer Experience Manager,"Customer Insights, User Experience Design",Various,Git,"Empathy, Communication","SurveyMonkey, Qualtrics"
+Computer Graphics Engineer,"Graphics Programming, Animation Techniques","OpenGL, DirectX",Git,"Creativity, Attention to Detail","Blender, Maya"
+Augmented Reality Developer,"AR Development, 3D Modeling","Unity, ARKit",Git,"Problem-Solving, Creativity","Unreal Engine, Vuforia"
+AI Deployment Specialist,"Model Deployment, Production Readiness","Docker, Kubernetes",Git,"Communication, Team Collaboration",Jupyter Notebook
+Smart Devices Engineer,"IoT Development, Device Integration","Arduino, Raspberry Pi",Git,"Problem-Solving, Innovation","Node-RED, MQTT"
+AI Technical Writer,"Technical Documentation, User Manuals",Various,Git,"Communication, Attention to Detail","Markdown, Confluence"
+Research Engineer (Machine Learning),"Research Design, Data Analysis","TensorFlow, Keras",Git,"Analytical Thinking, Team Collaboration",Jupyter Notebook
+AI Community Manager,"Community Engagement, Content Creation",Various,Git,"Communication, Creativity","Slack, Discord"
+Data Security Analyst (AI),"Data Security, Risk Assessment",Various,Git,"Analytical Skills, Attention to Detail",SIEM Tools
+Financial Analyst (AI),"Financial Modeling, Data Analysis","Excel, R",Git,"Critical Thinking, Problem-Solving","Tableau, Bloomberg"
+Algorithm Research Scientist,"Algorithm Development, Research Analysis","TensorFlow, PyTorch",Git,"Critical Thinking, Analytical Skills",Jupyter Notebook
+Predictive Analytics Consultant,"Predictive Modeling, Data Analysis","R, Python",Git,"Communication, Problem-Solving","SAS, Tableau"
+AI Curriculum Developer,"Curriculum Design, Educational Content",Various,Git,"Communication, Creativity",LMS Platforms
+AI Business Analyst,"Business Analysis, Requirements Gathering",Various,Git,"Analytical Thinking, Communication","MS Office, JIRA"
+Autonomous Systems Engineer,"Autonomous System Design, Robotics","ROS, MATLAB",Git,"Problem-Solving, Team Collaboration","Gazebo, RViz"
+AI Performance Engineer,"Performance Analysis, Model Optimization","TensorFlow, PyTorch",Git,"Analytical Thinking, Communication",Jupyter Notebook
+Data Quality Analyst,"Data Quality Assessment, Data Cleansing","SQL, Python",Git,"Attention to Detail, Analytical Skills","Excel, Data Quality Tools"
+Visual Data Analyst,"Data Visualization, Dashboard Development","Tableau, Power BI",Git,"Creativity, Communication","D3.js, Google Data Studio"
+AI Hardware Engineer,"Hardware Design, Prototyping",Various,Git,"Problem-Solving, Attention to Detail",CAD Software
+Data Operations Manager,"Data Operations, Data Management",Various,Git,"Leadership, Communication","Apache Kafka, Talend"
+Machine Learning Trainer,"Model Training, Data Annotation",Various,Git,"Communication, Attention to Detail",Jupyter Notebook
+Knowledge Engineer,"Knowledge Representation, Ontology Development","OWL, RDF",Git,"Analytical Thinking, Communication",Protégé
+AI Test Engineer,"Testing AI Models, Quality Assurance",Various,Git,"Attention to Detail, Analytical Skills","Selenium, JIRA"
+Data Warehouse Developer,"Data Warehouse Design, ETL Processes","Snowflake, Redshift",Git,"Problem-Solving, Analytical Skills","Talend, Informatica"
+AI Systems Integrator,"System Integration, API Development",Various,Git,"Team Collaboration, Communication","Postman, JIRA"
+Robotics Process Automation Developer,"RPA Tools, Automation Frameworks","UiPath, Blue Prism",Git,"Problem-Solving, Attention to Detail",Automation Tools
+AI Risk Analyst,"Risk Assessment, Data Privacy",Various,Git,"Analytical Skills, Attention to Detail",Risk Management Software
+Computational Linguist,"Computational Linguistics, NLP","NLTK, SpaCy",Git,"Analytical Skills, Communication","Python, R"
+Game AI Developer,"Game Development, AI Techniques","Unity, Unreal Engine",Git,"Creativity, Problem-Solving","Blender, JIRA"
+AI Marketing Specialist,"Marketing Analytics, Campaign Management","Google Analytics, HubSpot",Git,"Communication, Creativity","SEMrush, Moz"
+Social Media Analyst (AI),"Social Media Analytics, Content Strategy","Hootsuite, Sprout Social",Git,"Communication, Analytical Skills","Excel, Tableau"
+AI Strategy Consultant,"AI Strategy Development, Business Case Analysis",Various,Git,"Strategic Thinking, Communication","MS Office, JIRA"
+Data Collection Specialist,"Data Collection Techniques, Survey Design","Google Forms, Qualtrics",Git,"Attention to Detail, Communication","MS Office, Google Sheets"
+AI Lab Technician,"Lab Management, Equipment Maintenance",Various,Git,"Attention to Detail, Problem-Solving",Lab Management Software
+AI Model Validator,"Model Validation, Performance Testing",Various,Git,"Analytical Skills, Attention to Detail",Jupyter Notebook
+Machine Learning Solutions Architect,"Solution Design, System Architecture",Various,Git,"Strategic Thinking, Communication","MS Office, Visio"
+Cognitive Analyst,"Cognitive Analytics, Behavioral Insights","R, Python",Git,"Analytical Skills, Problem-Solving","Tableau, Excel"
+Data Science Instructor,"Teaching Data Science, Curriculum Development",Various,Git,"Communication, Creativity",LMS Platforms
+AI Research Analyst,"Research Analysis, Data Interpretation","R, Python",Git,"Analytical Skills, Communication",Jupyter Notebook
+Machine Learning Systems Engineer,"Systems Engineering, Model Deployment","TensorFlow, Kubernetes",Git,"Problem-Solving, Team Collaboration","Docker, Jenkins"
+Video Analytics Engineer,"Video Processing, Object Tracking","OpenCV, TensorFlow",Git,"Attention to Detail, Creativity","Python, MATLAB"
+AI Compliance Specialist,"Regulatory Compliance, Risk Management",Various,Git,"Attention to Detail, Communication",Compliance Software
+Multi-Modal Data Scientist,"Multi-Modal Learning, Data Fusion","TensorFlow, PyTorch",Git,"Analytical Skills, Problem-Solving",Jupyter Notebook
+AI Deployment Manager,"Model Deployment, Production Readiness","Docker, Kubernetes",Git,"Team Collaboration, Communication","Jenkins, Ansible"
+AI Research Assistant,"Literature Review, Data Collection","Communication, Attention to Detail","MS Office, Jupyter Notebook",,
+Digital Twin Engineer,"Digital Twin Technology, Simulation","Problem-Solving, Analytical Skills","AnyLogic, TwinCAT",,
+AI Ethics Officer,"AI Ethics, Compliance, Risk Assessment","Analytical Thinking, Communication",Ethical Compliance Tools,,
+AI Data Labeling Specialist,"Data Annotation, Quality Assurance","Attention to Detail, Team Collaboration","Labelbox, Supervisely",,
+AI Data Curator,"Data Curation, Data Management","Analytical Skills, Communication","Excel, Data Management Tools",,
+AI User Experience Designer,"UX Design, User Research","Creativity, Communication","InVision, Adobe XD",,
+AI Content Strategist,"Content Development, SEO","Creative Thinking, Communication","CMS Platforms, Google Analytics",,
+AI Talent Acquisition Specialist,"Talent Sourcing, Recruitment Strategies","Communication, Interpersonal Skills",Applicant Tracking Systems,,
+AI Supply Chain Analyst,"Supply Chain Optimization, Data Analysis","Analytical Thinking, Problem-Solving","Tableau, ERP Software",,
+AI Operations Analyst,"Operations Analysis, Process Improvement","Analytical Skills, Communication",Process Mapping Tools,,
+AI Finance Analyst,"Financial Analysis, Risk Assessment","Analytical Thinking, Communication","Excel, Bloomberg",,
+AI Business Development Manager,"Business Development, Client Relations","Strategic Thinking, Networking","CRM Software, MS Office",,

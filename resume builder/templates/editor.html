@@ -1,0 +1,256 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="page-title">Resume Editor</h1>
+<div class="grid-2">
+  <div class="card" id="editor-left">
+    <h2>Personal</h2>
+    <label>Full name <input id="personal_full_name"></label>
+    <label>Email <input id="personal_email"></label>
+    <label>Phone <input id="personal_phone"></label>
+    <label>Location <input id="personal_location"></label>
+    <label>Website <input id="personal_website"></label>
+    <label>LinkedIn <input id="personal_linkedin"></label>
+    <label>GitHub <input id="personal_github"></label>
+
+    <h2>Professional Summary</h2>
+    <textarea id="summary_text" rows="4"></textarea>
+
+    <h2>Experience</h2>
+    <div id="experience_list"></div>
+    <button class="btn" onclick="addExperience()">+ Add Experience</button>
+
+    <h2>Education</h2>
+    <div id="education_list"></div>
+    <button class="btn" onclick="addEducation()">+ Add Education</button>
+
+    <h2>Projects</h2>
+    <div id="projects_list"></div>
+    <button class="btn" onclick="addProject()">+ Add Project</button>
+
+    <h2>Skills</h2>
+    <input id="skills_input" placeholder="Add skill and press Enter">
+    <div id="skills_tags" style="margin-top:8px"></div>
+
+    <h2>Certifications</h2>
+    <div id="certifications_list"></div>
+    <button class="btn" onclick="addCertification()">+ Add Certification</button>
+
+    <h2>Achievements</h2>
+    <div id="achievements_list"></div>
+    <button class="btn" onclick="addAchievement()">+ Add Achievement</button>
+
+    <div class="mt">
+      <button class="btn" onclick="save()">Save</button>
+      <button class="btn" onclick="sync()">Sync from Profile</button>
+      <button class="btn" onclick="preview()">Preview</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Preview / Export</h2>
+    <iframe id="preview_frame" style="width:100%;height:760px;border:1px solid #ddd;"></iframe>
+    <div class="mt">
+      <a class="btn" id="export_pdf" target="_blank">Export PDF</a>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+const payload = {{ payload | tojson | safe }};
+const resumeId = {{ r.id }};
+
+function createInput(name, value='', placeholder='') {
+  const wrap = document.createElement('div');
+  wrap.className = 'repeat-item';
+  wrap.innerHTML = `
+    <input class="inp" data-name="${name}" placeholder="${placeholder}" value="${value}">
+    <button class="link danger" onclick="this.parentNode.remove()">Remove</button>
+  `;
+  return wrap;
+}
+
+function createBlockExperience(item={}) {
+  const div = document.createElement('div');
+  div.className = 'block';
+  div.innerHTML = `
+    <label>Title <input class="inp" data-name="title" value="${item.title||''}"></label>
+    <label>Company <input class="inp" data-name="company" value="${item.company||''}"></label>
+    <label>Start <input class="inp" data-name="start" value="${item.start||''}"></label>
+    <label>End <input class="inp" data-name="end" value="${item.end||''}"></label>
+    <label>Description (newline for bullets)<textarea class="inp" data-name="desc" rows="3">${item.desc||''}</textarea></label>
+    <button class="link danger" onclick="this.parentNode.remove()">Remove</button>
+    <hr>
+  `;
+  return div;
+}
+
+function createBlockEducation(item={}) {
+  const div = document.createElement('div');
+  div.className = 'block';
+  div.innerHTML = `
+    <label>Degree <input class="inp" data-name="degree" value="${item.degree||''}"></label>
+    <label>School <input class="inp" data-name="school" value="${item.school||''}"></label>
+    <label>Year <input class="inp" data-name="year" value="${item.year||''}"></label>
+    <label>Details<textarea class="inp" data-name="details" rows="2">${item.details||''}</textarea></label>
+    <button class="link danger" onclick="this.parentNode.remove()">Remove</button>
+    <hr>
+  `;
+  return div;
+}
+
+function createBlockProject(item={}) {
+  const div = document.createElement('div');
+  div.className = 'block';
+  div.innerHTML = `
+    <label>Name <input class="inp" data-name="name" value="${item.name||''}"></label>
+    <label>Link <input class="inp" data-name="link" value="${item.link||''}"></label>
+    <label>Description<textarea class="inp" data-name="desc" rows="2">${item.desc||''}</textarea></label>
+    <button class="link danger" onclick="this.parentNode.remove()">Remove</button>
+    <hr>
+  `;
+  return div;
+}
+
+function createBlockCertification(item={}) {
+  const div = document.createElement('div');
+  div.className = 'block';
+  div.innerHTML = `
+    <label>Name <input class="inp" data-name="name" value="${item.name||''}"></label>
+    <label>Issuer <input class="inp" data-name="issuer" value="${item.issuer||''}"></label>
+    <label>Year <input class="inp" data-name="year" value="${item.year||''}"></label>
+    <button class="link danger" onclick="this.parentNode.remove()">Remove</button>
+    <hr>
+  `;
+  return div;
+}
+
+function addExperience(item) { document.getElementById('experience_list').appendChild(createBlockExperience(item||{})); }
+function addEducation(item){ document.getElementById('education_list').appendChild(createBlockEducation(item||{})); }
+function addProject(item){ document.getElementById('projects_list').appendChild(createBlockProject(item||{})); }
+function addCertification(item){ document.getElementById('certifications_list').appendChild(createBlockCertification(item||{})); }
+function addAchievement(text=''){ const wrap = document.createElement('div'); wrap.className='repeat-item'; wrap.innerHTML = `<input class="inp" data-name="achievement" value="${text}"> <button class="link danger" onclick="this.parentNode.remove()">Remove</button>`; document.getElementById('achievements_list').appendChild(wrap); }
+
+function setInitial() {
+  // personal
+  const p = payload.personal || {};
+  document.getElementById('personal_full_name').value = p.full_name || '';
+  document.getElementById('personal_email').value = p.email || '';
+  document.getElementById('personal_phone').value = p.phone || '';
+  document.getElementById('personal_location').value = p.location || '';
+  document.getElementById('personal_website').value = p.website || '';
+  document.getElementById('personal_linkedin').value = p.linkedin || '';
+  document.getElementById('personal_github').value = p.github || '';
+
+  document.getElementById('summary_text').value = (payload.summary && payload.summary.text) || '';
+
+  // experience
+  (payload.experience || []).forEach(e => addExperience(e));
+  // if none, add one blank
+  if(!(payload.experience && payload.experience.length)) addExperience();
+
+  (payload.education || []).forEach(e => addEducation(e));
+  if(!(payload.education && payload.education.length)) addEducation();
+
+  (payload.projects || []).forEach(pj => addProject(pj));
+
+  // skills
+  const skills = payload.skills || [];
+  skills.forEach(s => addSkillTag(s));
+
+  (payload.certifications || []).forEach(c => addCertification(c));
+
+  (payload.achievements || []).forEach(a => addAchievement(a));
+}
+
+function collectList(containerId, mapFunc) {
+  const container = document.getElementById(containerId);
+  const items = [];
+  container.querySelectorAll('.block').forEach(block => {
+    const obj = {};
+    block.querySelectorAll('.inp').forEach(inp => {
+      const key = inp.dataset.name;
+      obj[key] = inp.value || inp.textContent || '';
+    });
+    // remove empty-only
+    if(Object.values(obj).some(v=>String(v).trim())) items.push(obj);
+  });
+  // also support simple repeat-items (achievements)
+  container.querySelectorAll('.repeat-item').forEach(el=>{
+    const i = el.querySelector('.inp');
+    if(i && i.value && i.value.trim()) items.push(i.value.trim());
+  });
+  return items.map(mapFunc|| (x=>x));
+}
+
+function collectSkills() {
+  const tags = Array.from(document.querySelectorAll('#skills_tags .tag')).map(t=>t.dataset.val);
+  return tags;
+}
+
+function save() {
+  const payloadOut = {};
+  payloadOut.personal = {
+    full_name: document.getElementById('personal_full_name').value.trim(),
+    email: document.getElementById('personal_email').value.trim(),
+    phone: document.getElementById('personal_phone').value.trim(),
+    location: document.getElementById('personal_location').value.trim(),
+    website: document.getElementById('personal_website').value.trim(),
+    linkedin: document.getElementById('personal_linkedin').value.trim(),
+    github: document.getElementById('personal_github').value.trim(),
+  };
+  payloadOut.summary = { text: document.getElementById('summary_text').value.trim() };
+  payloadOut.experience = collectList('experience_list');
+  payloadOut.education = collectList('education_list');
+  payloadOut.projects = collectList('projects_list');
+  payloadOut.skills = collectSkills();
+  payloadOut.certifications = collectList('certifications_list');
+  payloadOut.achievements = collectList('achievements_list', x=>x);
+
+  fetch(`{{ url_for('resumes.save_api', resume_id=r.id) }}`, {
+    method: 'PATCH', headers: {'Content-Type':'application/json'}, body: JSON.stringify({data: payloadOut})
+  }).then(r=>{ if(r.ok) { alert('Saved'); preview(); } else alert('Save failed'); });
+  // update export links
+  setExports();
+}
+
+function sync(){
+  fetch(`{{ url_for('resumes.sync_from_profile', resume_id=r.id) }}`, {method:'POST'}).then(()=> location.reload());
+}
+
+function preview(){
+  fetch(`{{ url_for('resumes.preview', resume_id=r.id) }}`).then(r=>r.text()).then(html=>{
+    document.getElementById('preview_frame').srcdoc = html;
+  });
+  setExports();
+}
+
+function setExports(){
+  document.getElementById('export_pdf').href = `{{ url_for('resumes.export', resume_id=r.id, fmt='pdf') }}`;
+  document.getElementById('export_docx').href = `{{ url_for('resumes.export', resume_id=r.id, fmt='docx') }}`;
+  document.getElementById('export_txt').href = `{{ url_for('resumes.export', resume_id=r.id, fmt='txt') }}`;
+}
+
+function addSkillTag(text='') {
+  const wrap = document.createElement('span');
+  wrap.className='tag';
+  wrap.dataset.val = text||'';
+  wrap.innerHTML = `${text || ''} <button class="link danger" onclick="this.parentNode.remove()">x</button>`;
+  document.getElementById('skills_tags').appendChild(wrap);
+}
+
+document.getElementById('skills_input').addEventListener('keydown', function(e){
+  if(e.key === 'Enter' || e.key === ',') {
+    e.preventDefault();
+    const v = this.value.trim().replace(/,$/,'');
+    if(v) addSkillTag(v);
+    this.value='';
+  }
+});
+
+// Initialize UI
+setInitial();
+setExports();
+preview();
+</script>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="page-title">Job Tracker</h1>
+<div class="card">
+  <table class="table">
+    <thead><tr><th>Title</th><th>Company</th><th>Status</th><th>URL</th><th>Notes</th><th></th></tr></thead>
+    <tbody id="rows">
+      {% for j in jobs %}
+      <tr data-id="{{ j.id }}">
+        <td contenteditable="true">{{ j.title }}</td>
+        <td contenteditable="true">{{ j.company }}</td>
+        <td contenteditable="true">{{ j.status }}</td>
+        <td contenteditable="true">{{ j.url }}</td>
+        <td contenteditable="true">{{ j.notes }}</td>
+        <td><button class="btn danger" onclick="delRow({{ j.id }})">Delete</button></td>
+      </tr>
+      {% endfor %}
+      <tr class="new">
+        <td colspan="6"><button class="btn" onclick="addRow()">+ Add Job</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<script>
+function addRow(){
+  fetch("{{ url_for('jobs.create_job') }}", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({title:"New Role"})})
+    .then(r=>r.json()).then(j=>location.reload())
+}
+function delRow(id){
+  if(!confirm('Delete this job?')) return;
+  fetch("{{ url_for('jobs.delete_job', job_id=0) }}".replace('0', id), {method:"DELETE"}).then(()=>location.reload())
+}
+document.querySelectorAll("#rows tr[data-id]").forEach(tr=>{
+  tr.querySelectorAll("[contenteditable]").forEach(cell=>{
+    cell.addEventListener("blur", ()=>{
+      const id = tr.dataset.id;
+      const tds = tr.querySelectorAll("td");
+      fetch("{{ url_for('jobs.update_job', job_id=0) }}".replace('0', id), {
+        method:"PATCH", headers:{"Content-Type":"application/json"},
+        body: JSON.stringify({title: tds[0].innerText.trim(), company: tds[1].innerText.trim(), status: tds[2].innerText.trim(), url: tds[3].innerText.trim(), notes: tds[4].innerText.trim()})
+      });
+    });
+  });
+});
+</script>
+{% endblock %}

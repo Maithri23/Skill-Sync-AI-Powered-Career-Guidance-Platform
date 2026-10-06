@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Skills for Electronics and Communication</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative; /* Ensures positioning works for the home button */
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            justify-items: center;
+            width: 80%;
+        }
+        .skill-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 90%;
+        }
+        .skill-button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        .home-button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s, transform 0.2s;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .home-button:hover {
+            background-color: #ff4500;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Home Button positioned in top right corner -->
+    <a href="{{ url_for('home') }}">
+        <button class="home-button">Home</button>
+    </a>
+
+    <h1>Basic Skills for Electronics and Communication</h1>
+    
+    <div class="container">
+        <button class="skill-button">Analog Circuits</button>
+        <button class="skill-button">Digital Circuits</button>
+        <button class="skill-button">Signal Processing</button>
+        <button class="skill-button">Microelectronics</button>
+        <button class="skill-button">Communication Systems</button>
+        <button class="skill-button">Control Systems</button>
+        <button class="skill-button">Electromagnetics</button>
+        <button class="skill-button">VLSI Design</button>
+        <button class="skill-button">Embedded Systems</button>
+        <button class="skill-button">Wireless Communication</button>
+        <button class="skill-button">IoT (Internet of Things)</button>
+        <button class="skill-button">PCB Design</button>
+        <button class="skill-button">MATLAB</button>
+        <button class="skill-button">Simulink</button>
+        <button class="skill-button">ARM Microcontrollers</button>
+        <button class="skill-button">FPGA</button>
+        <button class="skill-button">Antenna Design</button>
+        <button class="skill-button">Network Protocols</button>
+        <button class="skill-button">RF Engineering</button>
+        <button class="skill-button">Communication Protocols</button>
+        <button class="skill-button">C Programming</button>
+        <button class="skill-button">C++ Programming</button>
+        <button class="skill-button">Python Programming</button>
+        <button class="skill-button">RTOS (Real-Time Operating Systems)</button>
+        <button class="skill-button">LTE Technology</button>
+        <button class="skill-button">5G Networks</button>
+        <button class="skill-button">DSP (Digital Signal Processing)</button>
+        <button class="skill-button">Modulation Techniques</button>
+        <button class="skill-button">Data Communication</button>
+        <button class="skill-button">Microprocessor</button>
+        <button class="skill-button">Power Electronics</button>
+        <button class="skill-button">Optical Communication</button>
+        <button class="skill-button">Satellite Communication</button>
+        <button class="skill-button">Control Theory</button>
+        <button class="skill-button">Systems and Signals</button>
+        <button class="skill-button">Wireless Sensors</button>
+        <button class="skill-button">Digital Logic</button>
+        <button class="skill-button">Circuit Analysis</button>
+        <button class="skill-button">Automation Systems</button>
+        <button class="skill-button">Signal Integrity</button>
+        <button class="skill-button">Telecommunication Networks</button>
+        <button class="skill-button">DSP Algorithms</button>
+        <button class="skill-button">Data Transmission</button>
+        <button class="skill-button">Analog-to-Digital Conversion</button>
+        <button class="skill-button">Digital-to-Analog Conversion</button>
+        <button class="skill-button">RF Circuit Design</button>
+        <button class="skill-button">Wireless Sensor Networks</button>
+        <button class="skill-button">Machine Learning</button>
+        <button class="skill-button">Data Structures</button>
+        <button class="skill-button">Embedded C</button>
+   
+    </div>
+
+</body>
+</html>

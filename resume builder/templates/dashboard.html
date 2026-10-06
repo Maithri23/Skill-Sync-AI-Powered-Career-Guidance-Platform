@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="page-title">Dashboard</h1>
+<section class="grid">
+  <div class="card">
+    <div class="card-head">
+      <h2>Resumes</h2>
+      <a class="btn" href="{{ url_for('resumes.new') }}">+ New Resume</a>
+    </div>
+    <ul>
+      {% for r in resumes %}
+        <li>
+          <strong>{{ r.title }}</strong> — <a href="{{ url_for('resumes.editor', resume_id=r.id) }}">Edit</a> ·
+          <a href="{{ url_for('resumes.export', resume_id=r.id, fmt='pdf') }}">PDF</a> ·
+          <a href="{{ url_for('resumes.export', resume_id=r.id, fmt='docx') }}">DOCX</a> ·
+          <a href="{{ url_for('resumes.export', resume_id=r.id, fmt='txt') }}">TXT</a>
+          <form style="display:inline" method="post" action="{{ url_for('resumes.delete', resume_id=r.id) }}">
+            <button class="link danger" onclick="return confirm('Delete resume?')">Delete</button>
+          </form>
+        </li>
+      {% else %}
+        <li>No resumes yet.</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <h2>Cover Letters</h2>
+      <a class="btn" href="{{ url_for('cover.new') }}">+ New Cover Letter</a>
+    </div>
+    <ul>
+      {% for c in covers %}
+        <li><strong>{{ c.title }}</strong> — <a href="{{ url_for('cover.edit', cl_id=c.id) }}">Edit</a></li>
+      {% else %}
+        <li>No cover letters yet.</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <h2>Job Tracker</h2>
+      <a class="btn" href="{{ url_for('jobs.board') }}">Open</a>
+    </div>
+    <ul>
+      {% for j in jobs %}
+        <li><strong>{{ j.title }}</strong> @ {{ j.company or '—' }}</li>
+      {% else %}
+        <li>No jobs yet.</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}

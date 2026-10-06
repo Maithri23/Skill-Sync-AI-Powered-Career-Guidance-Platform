@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Skills for Biomedical</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative; /* Ensures positioning works for the home button */
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            justify-items: center;
+            width: 80%;
+        }
+        .skill-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 90%;
+        }
+        .skill-button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        .home-button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s, transform 0.2s;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .home-button:hover {
+            background-color: #ff4500;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Home Button positioned in top right corner -->
+    <a href="{{ url_for('home') }}">
+        <button class="home-button">Home</button>
+    </a>
+
+    <h1>Basic Skills for Biomedical</h1>
+    
+    <div class="container">
+        <button class="skill-button">Biomedical Engineering Fundamentals</button>
+        <button class="skill-button">Human Anatomy</button>
+        <button class="skill-button">Medical Imaging</button>
+        <button class="skill-button">Biomaterials</button>
+        <button class="skill-button">Biomechanics</button>
+        <button class="skill-button">Signal Processing</button>
+        <button class="skill-button">Medical Device Design</button>
+        <button class="skill-button">Biotechnology</button>
+        <button class="skill-button">Genetics</button>
+        <button class="skill-button">Biochemistry</button>
+        <button class="skill-button">Pharmacology</button>
+        <button class="skill-button">Regulatory Affairs</button>
+        <button class="skill-button">Clinical Trials</button>
+        <button class="skill-button">Biostatistics</button>
+        <button class="skill-button">Cell Biology</button>
+        <button class="skill-button">Molecular Biology</button>
+        <button class="skill-button">Medical Robotics</button>
+        <button class="skill-button">Electronics for Biomedical</button>
+        <button class="skill-button">Bioinformatics</button>
+        <button class="skill-button">Biomedical Software Development</button>
+        <button class="skill-button">Tissue Engineering</button>
+        <button class="skill-button">Pharmaceutical Engineering</button>
+        <button class="skill-button">Medical Image Analysis</button>
+        <button class="skill-button">Clinical Engineering</button>
+        <button class="skill-button">Bioengineering</button>
+        <button class="skill-button">Pathophysiology</button>
+        <button class="skill-button">Implantable Devices</button>
+        <button class="skill-button">Neuroscience</button>
+        <button class="skill-button">Biological Signal Processing</button>
+        <button class="skill-button">BioMEMS</button>
+        <button class="skill-button">Cell Culture Techniques</button>
+        <button class="skill-button">LabVIEW for Biomedical</button>
+        <button class="skill-button">Medical Data Analysis</button>
+        <button class="skill-button">Artificial Organs</button>
+        <button class="skill-button">Genetic Engineering</button>
+        <button class="skill-button">Healthcare IT</button>
+        <button class="skill-button">Pharmacokinetics</button>
+        <button class="skill-button">Biosensors</button>
+        <button class="skill-button">Medical Informatics</button>
+        <button class="skill-button">Bioethics</button>
+        <button class="skill-button">Healthcare Management</button>
+        <button class="skill-button">Radiation Therapy</button>
+        <button class="skill-button">Clinical Laboratory Sciences</button>
+        <button class="skill-button">Cytotechnology</button>
+        <button class="skill-button">Bioinstrumentation</button>
+        <button class="skill-button">Clinical Diagnostics</button>
+        <button class="skill-button">Drug Development</button>
+        <button class="skill-button">Bioengineering Ethics</button>
+        <button class="skill-button">Human Factors Engineering</button>
+        <button class="skill-button">Medical Statistics</button>
+  
+    </div>
+
+</body>
+</html>

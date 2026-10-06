@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Skills for Chemical Enginer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative; /* Ensures positioning works for the home button */
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            justify-items: center;
+            width: 80%;
+        }
+        .skill-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 90%;
+        }
+        .skill-button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        .home-button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s, transform 0.2s;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .home-button:hover {
+            background-color: #ff4500;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Home Button positioned in top right corner -->
+    <a href="{{ url_for('home') }}">
+        <button class="home-button">Home</button>
+    </a>
+
+    <h1>Basic Skills for Chemical Engineering</h1>
+    
+    <div class="container">
+        <button class="skill-button">Process Control</button>
+        <button class="skill-button">Chemical Process Design</button>
+        <button class="skill-button">Thermodynamics</button>
+        <button class="skill-button">Fluid Mechanics</button>
+        <button class="skill-button">Heat Transfer</button>
+        <button class="skill-button">Mass Transfer</button>
+        <button class="skill-button">Chemical Reaction Engineering</button>
+        <button class="skill-button">Biochemical Engineering</button>
+        <button class="skill-button">Process Simulation</button>
+        <button class="skill-button">Safety Engineering</button>
+        <button class="skill-button">Materials Science</button>
+        <button class="skill-button">Separation Processes</button>
+        <button class="skill-button">Environmental Engineering</button>
+        <button class="skill-button">Piping Design</button>
+        <button class="skill-button">Control Systems</button>
+        <button class="skill-button">Project Management</button>
+        <button class="skill-button">Distillation</button>
+        <button class="skill-button">Reactor Design</button>
+        <button class="skill-button">Chemical Process Simulation Software</button>
+        <button class="skill-button">Process Economics</button>
+        <button class="skill-button">Petrochemical Engineering</button>
+        <button class="skill-button">Nanotechnology</button>
+        <button class="skill-button">Pharmaceutical Engineering</button>
+        <button class="skill-button">Energy Systems</button>
+        <button class="skill-button">Process Optimization</button>
+        <button class="skill-button">Unit Operations</button>
+        <button class="skill-button">Corrosion Engineering</button>
+        <button class="skill-button">Sustainable Development</button>
+        <button class="skill-button">Instrumental Analysis</button>
+        <button class="skill-button">Fluidized Bed Systems</button>
+        <button class="skill-button">Process Dynamics</button>
+        <button class="skill-button">Chemical Engineering Software (Aspen Plus, HYSYS)</button>
+        <button class="skill-button">Crystallization</button>
+        <button class="skill-button">Water Treatment</button>
+        <button class="skill-button">Pollution Control</button>
+        <button class="skill-button">Transport Phenomena</button>
+        <button class="skill-button">Wastewater Treatment</button>
+        <button class="skill-button">Catalysis</button>
+        <button class="skill-button">Air Pollution Control</button>
+        <button class="skill-button">Batch Processing</button>
+        <button class="skill-button">Automation in Chemical Engineering</button>
+        <button class="skill-button">Green Chemistry</button>
+        <button class="skill-button">Process Integration</button>
+        <button class="skill-button">Industrial Chemistry</button>
+        <button class="skill-button">Chemical Safety</button>
+        <button class="skill-button">Toxicology</button>
+        <button class="skill-button">Chemical Plant Design</button>
+        <button class="skill-button">Microreaction Technology</button>
+        <button class="skill-button">Solvent Recovery</button>
+        <button class="skill-button">Process Troubleshooting</button>
+
+    </div>
+
+</body>
+</html>

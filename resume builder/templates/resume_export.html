@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{{ r.title }}</title>
+<style>
+  /* Original Export Styles - unchanged */
+  body { 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 11pt; 
+    line-height: 1.25; 
+    color: #111; 
+    margin: 24px; 
+    background: #fff;
+  }
+  h1 { font-size: 16pt; margin: 0 0 6px 0; }
+  .contact { font-size: 10pt; color: #333; margin-bottom: 10px; }
+  h2 { font-size: 12pt; margin: 12px 0 6px; padding-bottom: 2px; border-bottom: 1px solid #999; }
+  p { margin: 0 0 6px 0; }
+  ul { margin: 0 0 6px 16px; padding: 0; }
+  li { margin: 0 0 4px 0; }
+
+  /* Screen Preview Override (does not affect export) */
+  @media screen {
+    body {
+      background: #f4f4f4 !important;
+      color: #000 !important;
+    }
+    .contact {
+      color: #222 !important;
+    }
+  }
+</style>
+</head>
+<body>
+{% set d = data or {} %}
+
+{# --- PERSONAL INFO --- #}
+{% if d.personal %}
+  {% set name = d.personal.get('full_name') %}
+  {% if name %}<h1>{{ name }}</h1>{% endif %}
+  {% set contacts = [
+    d.personal.get('email'), d.personal.get('phone'), d.personal.get('location'),
+    d.personal.get('website'), d.personal.get('linkedin'), d.personal.get('github')
+  ] | select | list %}
+  {% if contacts %}
+    <div class="contact">{{ contacts|join(' | ') }}</div>
+  {% endif %}
+{% endif %}
+
+{# --- SUMMARY --- #}
+{% if d.summary and d.summary.get('text') %}
+  <h2>Professional Summary</h2>
+  <p>{{ d.summary.get('text') }}</p>
+{% endif %}
+
+{# --- EXPERIENCE --- #}
+{% if d.experience %}
+  {% set exp_valid = d.experience | selectattr('title') | list %}
+  {% if exp_valid %}
+    <h2>Experience</h2>
+    {% for e in d.experience if e %}
+      {% set title = e.get('title') %}
+      {% set company = e.get('company') %}
+      {% set dates = [e.get('start'), e.get('end')] | select | join(' - ') %}
+      {% set line1 = [title, company] | select | join(' — ') %}
+      {% if line1 %}<p><strong>{{ line1 }}</strong>{% if dates %} · {{ dates }}{% endif %}</p>{% endif %}
+      {% if e.get('desc') %}
+        <ul>
+          {% for bullet in e.get('desc').split('\n') if bullet.strip() %}
+            <li>{{ bullet.strip() }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endif %}
+
+{# --- EDUCATION --- #}
+{% if d.education %}
+  {% set edu_valid = d.education | selectattr('degree') | list %}
+  {% if edu_valid %}
+    <h2>Education</h2>
+    {% for ed in d.education if ed %}
+      {% set line = [ed.get('degree'), ed.get('school'), ed.get('year')] | select | join(', ') %}
+      {% if line %}<p><strong>{{ line }}</strong></p>{% endif %}
+      {% if ed.get('details') %}<p>{{ ed.get('details') }}</p>{% endif %}
+    {% endfor %}
+  {% endif %}
+{% endif %}
+
+{# --- PROJECTS --- #}
+{% if d.projects %}
+  {% set proj_valid = d.projects | selectattr('name') | list %}
+  {% if proj_valid %}
+    <h2>Projects</h2>
+    <ul>
+      {% for pr in d.projects if pr %}
+        {% set title = [pr.get('name'), pr.get('link')] | select | join(' — ') %}
+        {% if title %}<li><strong>{{ title }}</strong></li>{% endif %}
+        {% if pr.get('desc') %}
+          <li>{{ pr.get('desc') }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endif %}
+
+{# --- SKILLS --- #}
+{% if d.skills %}
+  {% set skills = d.skills | select | map('string') | list %}
+  {% if skills %}
+    <h2>Skills</h2>
+    <p>{{ skills|join(', ') }}</p>
+  {% endif %}
+{% endif %}
+
+{# --- CERTIFICATIONS --- #}
+{% if d.certifications %}
+  {% set cert_valid = d.certifications | selectattr('name') | list %}
+  {% if cert_valid %}
+    <h2>Certifications</h2>
+    <ul>
+    {% for c in d.certifications if c %}
+      {% set line = [c.get('name'), c.get('issuer'), c.get('year')] | select | join(', ') %}
+      {% if line %}<li>{{ line }}</li>{% endif %}
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endif %}
+
+{# --- ACHIEVEMENTS --- #}
+{% if d.achievements %}
+  {% set ach = d.achievements | select | map('string') | list %}
+  {% if ach %}
+    <h2>Achievements</h2>
+    <ul>
+      {% for a in ach %}<li>{{ a }}</li>{% endfor %}
+    </ul>
+  {% endif %}
+{% endif %}
+
+</body>
+</html>

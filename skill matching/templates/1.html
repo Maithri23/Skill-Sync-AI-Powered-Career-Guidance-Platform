@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Skills for Aerospace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative; /* Ensures positioning works for the home button */
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            justify-items: center;
+            width: 80%;
+        }
+        .skill-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 90%;
+        }
+        .skill-button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        .home-button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s, transform 0.2s;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .home-button:hover {
+            background-color: #ff4500;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Home Button positioned in top right corner -->
+    <a href="{{ url_for('home') }}">
+        <button class="home-button">Home</button>
+    </a>
+
+    <h1>Basic Skills for Aerospace</h1>
+    
+    <div class="container">
+        <button class="skill-button">Aerospace Engineering Fundamentals</button>
+        <button class="skill-button">Fluid Mechanics</button>
+        <button class="skill-button">Aerodynamics</button>
+        <button class="skill-button">Propulsion Systems</button>
+        <button class="skill-button">Aircraft Structures</button>
+        <button class="skill-button">Control Systems</button>
+        <button class="skill-button">Materials Science</button>
+        <button class="skill-button">Space Systems Engineering</button>
+        <button class="skill-button">Avionics</button>
+        <button class="skill-button">Flight Mechanics</button>
+        <button class="skill-button">Computational Fluid Dynamics</button>
+        <button class="skill-button">Finite Element Analysis</button>
+        <button class="skill-button">Rocket Propulsion</button>
+        <button class="skill-button">Aircraft Performance</button>
+        <button class="skill-button">Mission Planning</button>
+        <button class="skill-button">Aerostructures</button>
+        <button class="skill-button">Autonomous Systems</button>
+        <button class="skill-button">Satellite Engineering</button>
+        <button class="skill-button">Aircraft Systems Integration</button>
+        <button class="skill-button">Materials Testing</button>
+        <button class="skill-button">Flight Testing</button>
+        <button class="skill-button">Avionics Systems</button>
+        <button class="skill-button">Space Launch Systems</button>
+        <button class="skill-button">Unmanned Aerial Systems</button>
+        <button class="skill-button">Aircraft Electrical Systems</button>
+        <button class="skill-button">Wind Tunnel Testing</button>
+        <button class="skill-button">Radar and Sensors</button>
+        <button class="skill-button">Navigation Systems</button>
+        <button class="skill-button">Spacecraft Design</button>
+        <button class="skill-button">Control Law Development</button>
+        <button class="skill-button">Navigation Algorithms</button>
+        <button class="skill-button">Thermodynamics</button>
+        <button class="skill-button">Stress Analysis</button>
+        <button class="skill-button">Signal Processing</button>
+        <button class="skill-button">Flight Data Analysis</button>
+        <button class="skill-button">Simulation and Modeling</button>
+        <button class="skill-button">Robotics in Aerospace</button>
+        <button class="skill-button">Aerospace Materials</button>
+        <button class="skill-button">Space Exploration</button>
+        <button class="skill-button">Aircraft Design</button>
+        <button class="skill-button">Sustainability in Aerospace</button>
+        <button class="skill-button">Flight Safety</button>
+        <button class="skill-button">Aircraft Manufacturing</button>
+        <button class="skill-button">Air Traffic Control</button>
+        <button class="skill-button">Hypersonics</button>
+        <button class="skill-button">Atmospheric Science</button>
+        <button class="skill-button">Rocket Launch Vehicles</button>
+        <button class="skill-button">Subsonic and Supersonic Flight</button>
+        <button class="skill-button">Wind and Gust Analysis</button>
+        <button class="skill-button">Aircraft Maintenance</button>
+ 
+    </div>
+
+</body>
+</html>

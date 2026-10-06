@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Job Recommendations</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kristen+ITC&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: linear-gradient(120deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
+            background-size: 400% 400%;
+            animation: gradientMotion 15s ease infinite;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientMotion {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 800px;
+            width: 95%;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 15px;
+            border: 5px solid transparent;
+            box-shadow: 0 4px 20px rgba(255, 255, 4, 0.2);
+            text-align: center;
+            animation: frameColorChange 6s infinite;
+        }
+
+        @keyframes frameColorChange {
+            0%   { border-color: rgba(255, 126, 95, 0.7); }
+            25%  { border-color: rgba(254, 180, 123, 0.7); }
+            50%  { border-color: rgba(106, 17, 203, 0.7); }
+            75%  { border-color: rgba(37, 117, 252, 0.7); }
+            100% { border-color: rgba(255, 126, 95, 0.7); }
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ff4c4c;
+            margin-bottom: 20px;
+            font-family: 'Kristen ITC', cursive, sans-serif;
+            font-style: italic;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            text-decoration-thickness: 4px;
+            transition: 0.3s ease-in-out;
+        }
+
+        h1:hover {
+            transform: scale(1.05);
+            color: #e74c3c;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .marquee {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        marquee {
+            font-size: 1.1em;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background: rgba(255, 255, 255, 0.8);
+            margin: 15px 0;
+            padding: 18px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            transform: translateY(-30px);
+            animation: slideIn 0.6s forwards;
+        }
+
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .job-btn {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 14px 30px;
+            font-size: 1.2em;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 320px;
+            margin: auto;
+            transition: all 0.3s ease;
+        }
+
+        .job-btn:hover {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            transform: scale(1.1);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-link {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 25px;
+            background-color: #2c3e50;
+            color: #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #34495e;
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1em;
+            color: #eee;
+        }
+
+        footer a {
+            color: #ff7e5f;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #ff9800;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.4em; }
+            h2 { font-size: 1.3em; }
+            .job-btn { font-size: 1em; padding: 12px 25px; }
+            .container { padding: 20px; margin: 15px; }
+            .nav-link { font-size: 0.95em; padding: 10px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Top 3 Job-Title Recommendations</h1>
+
+        <!-- Motivational Quote -->
+        <div class="marquee">
+            <marquee behavior="scroll" direction="left" scrollamount="5">
+                🚀 "Opportunities don't happen, you create them." — Chris Grosser |
+                💼 "Choose a job you love, and you’ll never work a day in your life." — Confucius
+            </marquee>
+        </div>
+
+        {% if recommendations %}
+            <ul>
+                {% for job in recommendations %}
+                    <li>
+                        <button class="job-btn" onclick="window.location.href='{{ url_for('details', job_title=job['JobTitle']) }}'">
+                            {{ job['JobTitle'] }}
+                        </button>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <h2>No recommendations found. Please try again.</h2>
+        {% endif %}
+
+        <a href="/skills/" class="nav-link">🔙 Go Back</a>
+    </div>
+
+    <footer>
+        &copy; 2024 Career-Compass | All rights reserved. <br>
+        <a href="https://www.linkedin.com" target="_blank">Follow us on LinkedIn</a>
+    </footer>
+</body>
+</html>

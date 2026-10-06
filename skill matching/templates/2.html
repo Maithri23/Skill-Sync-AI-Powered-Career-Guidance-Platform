@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Skills for AI/ML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative; /* Ensures positioning works for the home button */
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            justify-items: center;
+            width: 80%;
+        }
+        .skill-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 90%;
+        }
+        .skill-button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        .home-button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s, transform 0.2s;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .home-button:hover {
+            background-color: #ff4500;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Home Button positioned in top right corner -->
+    <a href="{{ url_for('home') }}">
+        <button class="home-button">Home</button>
+    </a>
+
+    <h1>Basic Skills for AI/ML</h1>
+
+    <div class="container">
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Python')">Python</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=R')">R</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Java')">Java</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=C++')">C++</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Scala')">Scala</button>
+
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=MATLAB')">MATLAB</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=JavaScript')">JavaScript</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Linear Algebra')">Linear Algebra</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Probability')">Probability</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Statistics')">Statistics</button>
+
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Calculus')">Calculus</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Matrix Operations')">Matrix Operations</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Hypothesis Testing')">Hypothesis Testing</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Bayesian Statistics')">Bayesian Statistics</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Supervised Learning')">Supervised Learning</button>
+
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Unsupervised Learning')">Unsupervised Learning</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Reinforcement Learning')">Reinforcement Learning</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Decision Trees')">Decision Trees</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Random Forests')">Random Forests</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Support Vector Machines')">Support Vector Machines (SVM)</button>
+
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=K-Nearest Neighbors')">K-Nearest Neighbors (KNN)</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=K-Means Clustering')">K-Means Clustering</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Gradient Descent')">Gradient Descent</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Naive Bayes')">Naive Bayes</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Neural Networks')">Neural Networks</button>
+
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=TensorFlow')">TensorFlow</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Keras')">Keras</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=PyTorch')">PyTorch</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=MXNet')">MXNet</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Theano')">Theano</button>
+
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Data Cleaning')">Data Cleaning</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Data Wrangling')">Data Wrangling</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Feature Engineering')">Feature Engineering</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Dimensionality Reduction')">Dimensionality Reduction</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Data Visualization')">Data Visualization</button>
+
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Tokenization')">Tokenization</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Lemmatization and Stemming')">Lemmatization & Stemming</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Named Entity Recognition')">Named Entity Recognition (NER)</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Sentiment Analysis')">Sentiment Analysis</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Word Embeddings')">Word Embeddings</button>
+
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Text Classification')">Text Classification</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Image Classification')">Image Classification</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Object Detection')">Object Detection</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Convolutional Neural Networks')">Convolutional Neural Networks (CNNs)</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Image Segmentation')">Image Segmentation</button>
+
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=OpenCV')">OpenCV</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Git')">Git/GitHub</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Jupyter Notebooks')">Jupyter Notebooks</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Docker')">Docker</button>
+        <button class="skill-button" onclick="window.open('https://www.udemy.com/courses/search/?q=Kubernetes')">Kubernetes</button>
+    </div>
+
+</body>
+</html>
